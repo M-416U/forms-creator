@@ -2,7 +2,7 @@ import { ZodType } from 'zod'
 
 export interface FieldObject {
   name: string
-  value: string | number
+  value: string | number | boolean
   type: 'text' | 'number' | 'textarea' | 'checkbox' | 'file'
   className?: string
   parentClassName?: string

@@ -14,10 +14,14 @@
     "validation",
     "Zod"
   ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "author": "Mohamed Mohie (M-416U)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/M-416U/react-form-creator.git"
+    "url": "git+https://github.com/M-416U/forms-creator.git"
   },
   "scripts": {
     "build": "npm run build:esm && npm run build:cjs",
