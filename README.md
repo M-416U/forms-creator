@@ -8,21 +8,23 @@ You can install the `forms-creator` package via npm:
 
 `````bash
 npm install forms-creator
-```
+````
 
 Usage
+
 Importing the Component
+
 ````bash
 import FormCreator from 'forms-creator'
-```
+````
 
 Creating Form Fields
+
 Consider organizing your form field definitions in a forms folder. Each form can have its own file containing the field definitions.
 
 For example, you can create a LoginForm.ts file inside the forms folder:
 
 ```bash
-
 // forms/LoginForm.ts
 import { z } from 'zod'
 import { FieldObject } from 'forms-creator/types'
@@ -47,17 +49,17 @@ isRequired: true,
 errorClassName: "error",
 },
 ]
+````
 
-```
 Using the FormCreator Component
 
 ```bash
-
 import { loginFormFields } from './forms/LoginForm'
 
 // Inside your component
 <FormCreator className='form' fields={loginFormFields} onSubmit={handleSubmit} submitText='Login' />
-```
+````
+
 Handling Form Submission
 
 ```bash
@@ -65,5 +67,5 @@ const handleSubmit = (formData) => {
 // Handle form submission here
 console.log('Form data:', formData)
 }
-```
+````
 `````
