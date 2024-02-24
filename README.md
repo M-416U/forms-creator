@@ -74,3 +74,29 @@ const handleSubmit = (formData) => {
 console.log('Form data:', formData)
 }
 ```
+
+## Props
+
+| Prop            | Type              | Description                                                                     |
+| --------------- | ----------------- | ------------------------------------------------------------------------------- |
+| className       | String            | CSS class name for styling the form itself.                                     |
+| fields          | Array             | An array of FieldObject instances representing form fields.                     |
+| onSubmit        | Function          | A function to handle form submission. It receives the form data as an argument. |
+| submitText      | String (optional) | Text to display on the submit button (default is "Submit").                     |
+| submitClassName | String (optional) | CSS class name for styling the submit button.                                   |
+
+## Field Options
+
+| Option           | Type                              | Description                                                                           |
+| ---------------- | --------------------------------- | ------------------------------------------------------------------------------------- |
+| name             | String                            | The name of the form field.                                                           |
+| value            | String \| Number \| Boolean       | The initial value of the form field.                                                  |
+| type             | String                            | The type of the form field (text - number - textarea - checkbox - file).              |
+| className        | String (optional)                 | CSS class name for styling the input field.                                           |
+| parentClassName  | String (optional)                 | CSS class name for styling the parent div of the input field.                         |
+| child            | React.ReactNode (optional)        | React node for rendering additional content inside the parent div of the input field. |
+| customInput      | Custom React Component (optional) | Custom React component for rendering the input field.                                 |
+| validationSchema | Zod Schema (optional)             | Zod schema for validating the input field value.                                      |
+| label            | String (optional)                 | Label text for the input field.                                                       |
+| isRequired       | Boolean (optional)                | Boolean indicating whether the input field is required.                               |
+| errorClassName   | String (optional)                 | CSS class name for styling the error message.                                         |
