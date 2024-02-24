@@ -1,0 +1,5 @@
+export { default as TextInput } from './text-input'
+export { default as NumberInput } from './number-input'
+export { default as TextareaInput } from './textarea-input'
+export { default as CheckboxInput } from './checkbox-input'
+export { default as FileInput } from './file-input'
