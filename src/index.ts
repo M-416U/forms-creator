@@ -1,1 +1,1 @@
-export { default as FormCreator } from './components/creator'
+export { default as FormBuilder } from './components/creator'

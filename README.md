@@ -1,13 +1,13 @@
-# React Form Creator
+# Forms Creator
 
 A React component for creating dynamic forms with validation using Zod schemas.
 
 ## Installation
 
-You can install the `react-form-creator` package via npm:
+You can install the `forms-creator` package via npm:
 
 ```bash
-npm install react-form-creator
+npm install forms-creator
 ```
 
 ````
@@ -17,7 +17,7 @@ npm install react-form-creator
 ### Importing the Component
 
 ```javascript
-import FormCreator from 'react-form-creator'
+import FormCreator from 'forms-creator'
 ```
 
 ### Creating Form Fields
