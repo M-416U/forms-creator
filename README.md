@@ -69,7 +69,9 @@ import { loginFormFields } from './forms/LoginForm'
 ### Handling Form Submission
 
 ```TypeScript
-const handleSubmit = (formData) => {
+import {Typeofy} from "forms-creator"
+
+const handleSubmit = (formData:Typeofy(loginFormFields)) => {
 // Handle form submission here
 console.log('Form data:', formData)
 }
