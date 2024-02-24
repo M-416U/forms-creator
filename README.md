@@ -4,27 +4,33 @@ A React component for creating dynamic forms with validation using Zod schemas.
 
 ## Installation
 
-You can install the `forms-creator` package via npm:
+##### You can install the `forms-creator` package via npm:
 
-`````bash
+```bash
 npm install forms-creator
-````
+```
 
-Usage
+##### or yarn
+
+```bash
+yarn add forms-creator
+```
+
+## Usage
 
 Importing the Component
 
-````bash
+```TypeScript
 import FormCreator from 'forms-creator'
-````
+```
 
-Creating Form Fields
+## Creating Form Fields
 
 Consider organizing your form field definitions in a forms folder. Each form can have its own file containing the field definitions.
 
-For example, you can create a LoginForm.ts file inside the forms folder:
+#### For example, you can create a LoginForm.ts file inside the forms folder:
 
-```bash
+```TypeScript
 // forms/LoginForm.ts
 import { z } from 'zod'
 import { FieldObject } from 'forms-creator/types'
@@ -49,23 +55,22 @@ isRequired: true,
 errorClassName: "error",
 },
 ]
-````
+```
 
-Using the FormCreator Component
+### Using the FormCreator Component
 
-```bash
+```TypeScript
 import { loginFormFields } from './forms/LoginForm'
 
 // Inside your component
 <FormCreator className='form' fields={loginFormFields} onSubmit={handleSubmit} submitText='Login' />
-````
+```
 
-Handling Form Submission
+### Handling Form Submission
 
-```bash
+```TypeScript
 const handleSubmit = (formData) => {
 // Handle form submission here
 console.log('Form data:', formData)
 }
-````
-`````
+```
