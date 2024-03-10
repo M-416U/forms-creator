@@ -1,18 +1,16 @@
 'use client'
 import React, { useState } from 'react'
-
 import { FormCreatorProps } from '../types'
 import { RenderInput } from '../lib'
-import './main.css'
 import { ZodError } from 'zod'
 
 const FormCreator: React.FC<FormCreatorProps> = ({ className, fields, onSubmit, submitText, submitClassName }) => {
-  const [formData, setFormData] = useState<{ [key: string]: string }>({})
+  const [formData, setFormData] = useState<any>({})
   const [errors, setErrors] = useState<{ [key: string]: string }>({})
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData((prevData) => ({
+    setFormData((prevData: any) => ({
       ...prevData,
       [name]: value,
     }))

@@ -1,5 +1,5 @@
 import { ZodType } from 'zod'
-
+import { Typeofy } from './lib/typeofy'
 export interface FieldObject {
   name: string
   value: string | number | boolean
@@ -17,7 +17,7 @@ export interface FieldObject {
 export interface FormCreatorProps {
   className?: string
   fields: FieldObject[]
-  onSubmit: (formData: { [key: string]: string | number }) => void
+  onSubmit: (formData: typeof Typeofy<FieldObject[]>) => void
   submitText?: string
   submitClassName?: string
 }

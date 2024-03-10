@@ -15,6 +15,13 @@ function generateType<T extends FieldObject>(field: T): { [K in T['name']]: Valu
     [field.name]: field.value as ValueForType<T['type']>,
   } as { [K in T['name']]: ValueForType<T['type']> }
 }
-export function Typeofy(fields: FieldObject[]) {
-  return typeof fields.map((field) => generateType(field))
+
+type GeneratedType<T extends FieldObject[]> = {
+  [P in keyof T]: T[P] extends FieldObject ? { [K in T[P]['name']]: ValueForType<T[P]['type']> } : never
+}
+
+type Typeofy<T extends FieldObject[]> = GeneratedType<T>
+
+export function Typeofy<T extends FieldObject[]>(fields: T): Typeofy<T> {
+  return fields.map((field) => generateType(field)) as Typeofy<T>
 }
